@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendataan Siswa</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: steelblue;
+    }
+
+    .content {
+      max-width: 250px; 
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    }
+
+    .input-inbox, .category {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .details {
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="password"], input[type="date"], textarea, select {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    .Hobi, .SaudaraKandung, .Kelas, .KesanPesan {
+      margin-top: 20px;
+    }
+
+    .message-box {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: steelblue;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Formulir Pendataan Siswa</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-inbox">
+            <span class="details">Nama</span>
+            <input type="text" name="nama" required>
+          </div>
+          <div class="input-inbox">
+            <span class="details">Email</span>
+            <input type="text" name="email" required>
+          </div>
+          <div class="input-inbox">
+            <span class="details">Password</span>
+            <input type="password" name="password" required>
+          </div>
+          <div class="input-inbox">
+            <span class="details">Usia</span>
+            <input type="text" name="usia" required>
+          </div>
+          <div class="input-inbox">
+            <span class="details">Tanggal Lahir</span>
+            <input type="date" name="tanggal_lahir" required>
+          </div>
+        </div>
+        <div class="Hobi">
+          <span class="details">Hobi</span>
+          <div class="category">
+            <label for="dot-1">
+              <input type="checkbox" name="hobi">
+              Membaca Buku
+            </label>
+            <label for="dot-2">
+              <input type="checkbox" name="hobi">
+              Menonton
+            </label>
+            <label for="dot-3">
+              <input type="checkbox" name="hobi">
+              Berbelanja
+            </label>
+            <label for="dot-4">
+              <input type="checkbox" name="hobi">
+              Travelling
+            </label>
+            <label for="dot-5">
+              <input type="checkbox" name="hobi">
+              Olahraga
+            </label>
+          </div>
+        </div>
+        <div class="SaudaraKandung">
+          <span class="details">Saudara Kandung</span>
+          <div class="category">
+            <label for="dot-1">
+              <input type="radio" name="saudara_kandung">
+              1
+            </label>
+            <label for="dot-2">
+              <input type="radio" name="saudara_kandung">
+              2
+            </label>
+            <label for="dot-3">
+              <input type="radio" name="saudara_kandung">
+              3
+            </label>
+            <label for="dot-4">
+              <input type="radio" name="saudara_kandung">
+              4
+            </label>
+            <label for="dot-5">
+              <input type="radio" name="saudara_kandung">
+              5
+            </label>
+          </div>
+        </div>
+        <div class="Kelas">
+          <div class="input-inbox">
+            <span class="details">Kelas</span>
+            <select name="kelas" required>
+              <option value="">--- Pilih Kelas ---</option>
+              <option value="I">I</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+              <option value="IV">IV</option>
+              <option value="V">V</option>
+              <option value="VI">VI</option>
+              <option value="VII">VII</option>
+              <option value="VIII">VIII</option>
+              <option value="IX">IX</option>
+              <option value="X">X</option>
+              <option value="XI">XI</option>
+              <option value="XII">XII</option>
+            </select>
+          </div>
+        </div>
+        <div class="KesanPesan">
+          <span class="details">Kesan dan Pesan</span>
+          <div class="message-box">
+            <textarea name="kesan_pesan" rows="4" placeholder="Tulis kesan dan pesan Anda di sini"></textarea>
+          </div>
+        </div>
+        <input type="submit" value="Kirim">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
